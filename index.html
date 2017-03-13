@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="lab13.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="myModule.js"></script>
+<script src="lab13.js"></script>
+<title> Lab 13, Six year Old Simulator</title>
+</head>
+<body ng-controller="myController">
+
+<form>
+  <input type="submit" name="words" value="Words" label="button1" ng-click="addWord()"/>
+  <input type="submit" name="words" value="Fancy Words" label="button2"  ng-click='addFancyWord()' />
+
+  <input type="submit" name="words" value="Phrases" label="button4" ng-click="addPhrase()"/>
+  <input type="submit" name="words" value="Phrases with Fancy" label="button5" ng-click="fancyPhrase()"/>
+
+  </form>
+<p ng-class="words.styling" ng-repeat="words in emptyList">{{words.word}}</p>
+
+
+
+
+<!-- <p ng-init="["cat","dog","cow","pig","horse","chicken","goat"]">
+    <li ng-repeat="words in list"> {{words}}
+    </p>
+    </li> -->
+</body>
+</html>
